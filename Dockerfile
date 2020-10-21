@@ -2,8 +2,9 @@
 FROM node:alpine
 WORKDIR /usr/app
 #install dependences
-COPY ./ ./
+COPY ./package.json ./
 RUN npm install
+COPY ./ ./
 #default command
 CMD ["npm","start"]
 
